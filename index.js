@@ -1,5 +1,5 @@
 const URL = `https://api.openweathermap.org/data/2.5/weather`;
-const API_KEY = "e30e2daee255c78b9ae1c8f2470383af";
+const apiKey = "e30e2daee255c78b9ae1c8f2470383af";
 const form = document.querySelector("form");
 let weather = document.querySelector("#weather");
 let userInput = document.querySelector("#weather-search");
@@ -8,7 +8,7 @@ form.onsubmit = (e) => {
 	e.preventDefault();
 
 	let locale = userInput.value.trim();
-	let queryString = `?q=${locale}&units=imperial&appid=${API_KEY}`;
+	let queryString = `?q=${locale}&units=imperial&appid=${apiKey}`;
 	let fetchURL = `${URL}${queryString}`;
 
 	fetch(fetchURL)
